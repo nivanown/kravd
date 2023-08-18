@@ -967,6 +967,10 @@ body {
   margin: 0 0 78px;
   }
 
+.reviews-slider .swiper {
+  padding: 0 0 2px;
+  }
+
 .reviews-slider .gl-left-arrow.swiper-button-prev, 
 .reviews-slider .gl-right-arrow.swiper-button-next {
   top: 187px;
