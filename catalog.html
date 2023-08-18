@@ -31,16 +31,186 @@
                     </div> 
                 </div>
                 <div class="settings">
-                    <p class="settings__info-text">*при клике на кнопку “все фильтры” снизу появляются еще скрытые дополрнительные фильтры</p>
                     <div class="filters">
-                        <span class="filters__btn">Цена, ₽</span>
-                        <span class="filters__btn">Наши предложения</span>
-                        <span class="filters__btn">Бренд</span>
-                        <span class="filters__btn">В наличии (6)</span>
-                        <span class="filters__btn">Цвет</span>
-                        <span class="filters__btn">Тип управления</span>
-                        <span class="filters__btn">Автоматический режим</span>
-                        <span class="filters__btn">Длина, см</span>
+                        <div class="filters__item">
+                            <div data-role="dropdown">
+                                <span data-role="button" class="filters__btn">Цена, ₽</span>
+                                <div class="filters__dropdown filters__dropdown_big-size">
+                                    <span class="filters__close-btn">Закрыть</span>
+                                    <div class="price-slider">
+                                        <div class="price-input">
+                                            <div class="field">
+                                                <span>От</span>
+                                                <input
+                                                    type="number"
+                                                    class="input-min"
+                                                    data-default-value="0"
+                                                    value="0"
+                                                />
+                                            </div>
+                                            <div class="field">
+                                                <span>До</span>
+                                                <input
+                                                    type="number"
+                                                    class="input-max"
+                                                    data-default-value="100000"
+                                                    value="100000"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="slider">
+                                            <div class="progress"></div>
+                                        </div>
+                                        <div class="range-input">
+                                            <input type="range" class="range-min" min="0" max="100000" value="0" step="100">
+                                            <input type="range" class="range-max" min="0" max="100000" value="100000" step="100">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filters__item">
+                            <span class="filters__btn">Наши предложения</span>
+                        </div>
+                        <div class="filters__item">
+                            <span class="filters__btn">Бренд</span>
+                        </div>
+                        <div class="filters__item">
+                            <span class="filters__btn">В наличии (6)</span>
+                        </div>
+                        <div class="filters__item">
+                            <div data-role="dropdown">
+                                <span data-role="button" class="filters__btn">Цвет</span>
+                                <div class="filters__dropdown filters__dropdown_sm-size">
+                                    <span class="filters__close-btn">Закрыть</span>
+                                    <ul class="filters__list">
+                                        <li>
+                                            <div class="checkbox">
+                                                <input
+                                                    id="black-color"
+                                                    type="checkbox"
+                                                    data-default-value="0"
+                                                >
+                                                <label for="black-color">Черный</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="checkbox">
+                                                <input
+                                                    id="gray-color"
+                                                    type="checkbox"
+                                                    data-default-value="0"
+                                                />
+                                                <label for="gray-color">Серый</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="checkbox">
+                                                <input
+                                                    id="blue-color"
+                                                    type="checkbox"
+                                                    data-default-value="0"
+                                                />
+                                                <label for="blue-color">Синий</label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filters__item">
+                            <span class="filters__btn">Тип управления</span>
+                        </div>
+                        <div class="filters__item">
+                            <div data-role="dropdown">
+                                <span data-role="button" class="filters__btn">Автоматический режим</span>
+                                <div class="filters__dropdown">
+                                    <span class="filters__close-btn">Закрыть</span>
+                                    <ul class="filters__list filters__list_two-col">
+                                        <li>
+                                            <div class="checkbox">
+                                                <input
+                                                    id="yes"
+                                                    type="radio"
+                                                    data-default-value="0"
+                                                    name="mode"
+                                                />
+                                                <label for="yes">Да</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="checkbox">
+                                                <input
+                                                    id="no"
+                                                    type="radio"
+                                                    data-default-value="0"
+                                                    name="mode"
+                                                />
+                                                <label for="no">Нет</label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filters__item">
+                            <div data-role="dropdown">
+                                <span data-role="button" class="filters__btn">Длина, см</span>
+                                <div class="filters__dropdown filters__dropdown_big-size">
+                                    <span class="filters__close-btn">Закрыть</span>
+                                    <div class="price-slider">
+                                        <div class="price-input">
+                                            <div class="field">
+                                                <span>От</span>
+                                                <input
+                                                    type="number"
+                                                    class="input-min"
+                                                    value="0"
+                                                    data-default-value="0"
+                                                />
+                                            </div>
+                                            <div class="field">
+                                                <span>До</span>
+                                                <input
+                                                    type="number"
+                                                    class="input-max"
+                                                    value="1200"
+                                                    data-default-value="1200"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="slider">
+                                            <div class="progress"></div>
+                                        </div>
+                                        <div class="range-input">
+                                            <input type="range" class="range-min" min="0" max="1200" value="0" step="10">
+                                            <input type="range" class="range-max" min="0" max="1200" value="1200" step="10">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filters__item filters__item_hidden">
+                            <span class="filters__btn">Наши предложения</span>
+                        </div>
+                        <div class="filters__item filters__item_hidden">
+                            <span class="filters__btn">Бренд</span>
+                        </div>
+                        <div class="filters__item filters__item_hidden">
+                            <span class="filters__btn">В наличии (6)</span>
+                        </div>
+                        <div class="filters__item filters__item_hidden">
+                            <span class="filters__btn">Цвет</span>
+                        </div>
+                        <div class="filters__item filters__item_hidden">
+                            <span class="filters__btn">Тип управления</span>
+                        </div>
+                        <div class="filters__item filters__item_hidden">
+                            <span class="filters__btn">Автоматический режим</span>
+                        </div>
+                        <div class="filters__item filters__item_hidden">
+                            <span class="filters__btn">Длина, см</span>
+                        </div>
                         <span class="filters__all-btn">Все фильтры</span>
                     </div>
                     <div class="settings__bottom-panel">
@@ -287,25 +457,479 @@
                             </div>
                         </div>
                     </div>
+                    <div class="catalog-products__item">
+                        <div class="catalog-products__stickers">
+                            <span class="sticker">новинка</span>
+                            <span class="sticker sticker_orange-bg">акция</span>
+                        </div>
+                        <div class="catalog-products__flag">
+                            <img src="img/src/russia.svg" alt="flag">
+                        </div>
+                        <div class="catalog-products__photo">
+                            <a href="#">
+                                <picture>
+                                    <source srcset="img/src/product-img.webp" type="image/webp">
+                                    <img src="img/src/product-img.jpg" alt="photo">
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="catalog-products__description">
+                            <span class="catalog-products__title">
+                                <a href="#">ГР-500(630) (Россия) горбыльно-ребровой станок</a>
+                            </span>
+                            <ul class="catalog-products__list">
+                                <li>Ø обработки: 300 - 800 мм</li>
+                                <li>РМЦ: 500 - 4000 мм</li>
+                                <li>Мощность: 5,5 - 30 кВт</li>
+                                <li>Вес: 1000 - 5300 кг</li>
+                            </ul>
+                            <div class="catalog-products__bottom-panel">
+                                <a href="#" class="btn">подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-products__item">
+                        <div class="catalog-products__flag">
+                            <img src="img/src/russia.svg" alt="flag">
+                        </div>
+                        <div class="catalog-products__photo">
+                            <a href="#">
+                                <picture>
+                                    <source srcset="img/src/product-img.webp" type="image/webp">
+                                    <img src="img/src/product-img.jpg" alt="photo">
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="catalog-products__description">
+                            <span class="catalog-products__title">
+                                <a href="#">ГР-500(630) (Россия) горбыльно-ребровой станок</a>
+                            </span>
+                            <ul class="catalog-products__list">
+                                <li>Ø обработки: 300 - 800 мм</li>
+                                <li>РМЦ: 500 - 4000 мм</li>
+                                <li>Мощность: 5,5 - 30 кВт</li>
+                                <li>Вес: 1000 - 5300 кг</li>
+                            </ul>
+                            <div class="catalog-products__bottom-panel">
+                                <a href="#" class="btn">подробнее</a>
+                                <a href="#" class="btn btn_transparent-bg btn_mov-icon">видео</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-products__item">
+                        <div class="catalog-products__flag">
+                            <img src="img/src/russia.svg" alt="flag">
+                        </div>
+                        <div class="catalog-products__photo">
+                            <a href="#">
+                                <picture>
+                                    <source srcset="img/src/product-img.webp" type="image/webp">
+                                    <img src="img/src/product-img.jpg" alt="photo">
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="catalog-products__description">
+                            <span class="catalog-products__title">
+                                <a href="#">ГР-500(630) (Россия) горбыльно-ребровой станок</a>
+                            </span>
+                            <ul class="catalog-products__list">
+                                <li>Ø обработки: 300 - 800 мм</li>
+                                <li>РМЦ: 500 - 4000 мм</li>
+                                <li>Мощность: 5,5 - 30 кВт</li>
+                                <li>Вес: 1000 - 5300 кг</li>
+                            </ul>
+                            <div class="catalog-products__bottom-panel">
+                                <a href="#" class="btn">подробнее</a>
+                                <a href="#" class="btn btn_transparent-bg btn_mov-icon">видео</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-products__item">
+                        <div class="catalog-products__flag">
+                            <img src="img/src/russia.svg" alt="flag">
+                        </div>
+                        <div class="catalog-products__photo">
+                            <a href="#">
+                                <picture>
+                                    <source srcset="img/src/product-img.webp" type="image/webp">
+                                    <img src="img/src/product-img.jpg" alt="photo">
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="catalog-products__description">
+                            <span class="catalog-products__title">
+                                <a href="#">ГР-500(630) (Россия) горбыльно-ребровой станок</a>
+                            </span>
+                            <ul class="catalog-products__list">
+                                <li>Ø обработки: 300 - 800 мм</li>
+                                <li>РМЦ: 500 - 4000 мм</li>
+                                <li>Мощность: 5,5 - 30 кВт</li>
+                                <li>Вес: 1000 - 5300 кг</li>
+                            </ul>
+                            <div class="catalog-products__bottom-panel">
+                                <a href="#" class="btn">подробнее</a>
+                                <a href="#" class="btn btn_transparent-bg btn_mov-icon">видео</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-products__item">
+                        <div class="catalog-products__flag">
+                            <img src="img/src/russia.svg" alt="flag">
+                        </div>
+                        <div class="catalog-products__photo">
+                            <a href="#">
+                                <picture>
+                                    <source srcset="img/src/product-img.webp" type="image/webp">
+                                    <img src="img/src/product-img.jpg" alt="photo">
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="catalog-products__description">
+                            <span class="catalog-products__title">
+                                <a href="#">ГР-500(630) (Россия) горбыльно-ребровой станок</a>
+                            </span>
+                            <ul class="catalog-products__list">
+                                <li>Ø обработки: 300 - 800 мм</li>
+                                <li>РМЦ: 500 - 4000 мм</li>
+                                <li>Мощность: 5,5 - 30 кВт</li>
+                                <li>Вес: 1000 - 5300 кг</li>
+                            </ul>
+                            <div class="catalog-products__bottom-panel">
+                                <a href="#" class="btn">подробнее</a>
+                                <a href="#" class="btn btn_transparent-bg btn_mov-icon">видео</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-products__item">
+                        <div class="catalog-products__flag">
+                            <img src="img/src/russia.svg" alt="flag">
+                        </div>
+                        <div class="catalog-products__photo">
+                            <a href="#">
+                                <picture>
+                                    <source srcset="img/src/product-img.webp" type="image/webp">
+                                    <img src="img/src/product-img.jpg" alt="photo">
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="catalog-products__description">
+                            <span class="catalog-products__title">
+                                <a href="#">ГР-500(630) (Россия) горбыльно-ребровой станок</a>
+                            </span>
+                            <ul class="catalog-products__list">
+                                <li>Ø обработки: 300 - 800 мм</li>
+                                <li>РМЦ: 500 - 4000 мм</li>
+                                <li>Мощность: 5,5 - 30 кВт</li>
+                                <li>Вес: 1000 - 5300 кг</li>
+                            </ul>
+                            <div class="catalog-products__bottom-panel">
+                                <a href="#" class="btn">подробнее</a>
+                                <a href="#" class="btn btn_transparent-bg btn_mov-icon">видео</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-products__item">
+                        <div class="catalog-products__flag">
+                            <img src="img/src/russia.svg" alt="flag">
+                        </div>
+                        <div class="catalog-products__photo">
+                            <a href="#">
+                                <picture>
+                                    <source srcset="img/src/product-img.webp" type="image/webp">
+                                    <img src="img/src/product-img.jpg" alt="photo">
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="catalog-products__description">
+                            <span class="catalog-products__title">
+                                <a href="#">ГР-500(630) (Россия) горбыльно-ребровой станок</a>
+                            </span>
+                            <ul class="catalog-products__list">
+                                <li>Ø обработки: 300 - 800 мм</li>
+                                <li>РМЦ: 500 - 4000 мм</li>
+                                <li>Мощность: 5,5 - 30 кВт</li>
+                                <li>Вес: 1000 - 5300 кг</li>
+                            </ul>
+                            <div class="catalog-products__bottom-panel">
+                                <a href="#" class="btn">подробнее</a>
+                                <a href="#" class="btn btn_transparent-bg btn_mov-icon">видео</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-products__item">
+                        <div class="catalog-products__flag">
+                            <img src="img/src/russia.svg" alt="flag">
+                        </div>
+                        <div class="catalog-products__photo">
+                            <a href="#">
+                                <picture>
+                                    <source srcset="img/src/product-img.webp" type="image/webp">
+                                    <img src="img/src/product-img.jpg" alt="photo">
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="catalog-products__description">
+                            <span class="catalog-products__title">
+                                <a href="#">ГР-500(630) (Россия) горбыльно-ребровой станок</a>
+                            </span>
+                            <ul class="catalog-products__list">
+                                <li>Ø обработки: 300 - 800 мм</li>
+                                <li>РМЦ: 500 - 4000 мм</li>
+                                <li>Мощность: 5,5 - 30 кВт</li>
+                                <li>Вес: 1000 - 5300 кг</li>
+                            </ul>
+                            <div class="catalog-products__bottom-panel">
+                                <a href="#" class="btn">подробнее</a>
+                                <a href="#" class="btn btn_transparent-bg btn_mov-icon">видео</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-products__item">
+                        <div class="catalog-products__stickers">
+                            <span class="sticker">новинка</span>
+                            <span class="sticker sticker_orange-bg">акция</span>
+                        </div>
+                        <div class="catalog-products__flag">
+                            <img src="img/src/russia.svg" alt="flag">
+                        </div>
+                        <div class="catalog-products__photo">
+                            <a href="#">
+                                <picture>
+                                    <source srcset="img/src/product-img.webp" type="image/webp">
+                                    <img src="img/src/product-img.jpg" alt="photo">
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="catalog-products__description">
+                            <span class="catalog-products__title">
+                                <a href="#">ГР-500(630) (Россия) горбыльно-ребровой станок</a>
+                            </span>
+                            <ul class="catalog-products__list">
+                                <li>Ø обработки: 300 - 800 мм</li>
+                                <li>РМЦ: 500 - 4000 мм</li>
+                                <li>Мощность: 5,5 - 30 кВт</li>
+                                <li>Вес: 1000 - 5300 кг</li>
+                            </ul>
+                            <div class="catalog-products__bottom-panel">
+                                <a href="#" class="btn">подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-products__item">
+                        <div class="catalog-products__flag">
+                            <img src="img/src/russia.svg" alt="flag">
+                        </div>
+                        <div class="catalog-products__photo">
+                            <a href="#">
+                                <picture>
+                                    <source srcset="img/src/product-img.webp" type="image/webp">
+                                    <img src="img/src/product-img.jpg" alt="photo">
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="catalog-products__description">
+                            <span class="catalog-products__title">
+                                <a href="#">ГР-500(630) (Россия) горбыльно-ребровой станок</a>
+                            </span>
+                            <ul class="catalog-products__list">
+                                <li>Ø обработки: 300 - 800 мм</li>
+                                <li>РМЦ: 500 - 4000 мм</li>
+                                <li>Мощность: 5,5 - 30 кВт</li>
+                                <li>Вес: 1000 - 5300 кг</li>
+                            </ul>
+                            <div class="catalog-products__bottom-panel">
+                                <a href="#" class="btn">подробнее</a>
+                                <a href="#" class="btn btn_transparent-bg btn_mov-icon">видео</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-products__item">
+                        <div class="catalog-products__flag">
+                            <img src="img/src/russia.svg" alt="flag">
+                        </div>
+                        <div class="catalog-products__photo">
+                            <a href="#">
+                                <picture>
+                                    <source srcset="img/src/product-img.webp" type="image/webp">
+                                    <img src="img/src/product-img.jpg" alt="photo">
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="catalog-products__description">
+                            <span class="catalog-products__title">
+                                <a href="#">ГР-500(630) (Россия) горбыльно-ребровой станок</a>
+                            </span>
+                            <ul class="catalog-products__list">
+                                <li>Ø обработки: 300 - 800 мм</li>
+                                <li>РМЦ: 500 - 4000 мм</li>
+                                <li>Мощность: 5,5 - 30 кВт</li>
+                                <li>Вес: 1000 - 5300 кг</li>
+                            </ul>
+                            <div class="catalog-products__bottom-panel">
+                                <a href="#" class="btn">подробнее</a>
+                                <a href="#" class="btn btn_transparent-bg btn_mov-icon">видео</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-products__item">
+                        <div class="catalog-products__flag">
+                            <img src="img/src/russia.svg" alt="flag">
+                        </div>
+                        <div class="catalog-products__photo">
+                            <a href="#">
+                                <picture>
+                                    <source srcset="img/src/product-img.webp" type="image/webp">
+                                    <img src="img/src/product-img.jpg" alt="photo">
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="catalog-products__description">
+                            <span class="catalog-products__title">
+                                <a href="#">ГР-500(630) (Россия) горбыльно-ребровой станок</a>
+                            </span>
+                            <ul class="catalog-products__list">
+                                <li>Ø обработки: 300 - 800 мм</li>
+                                <li>РМЦ: 500 - 4000 мм</li>
+                                <li>Мощность: 5,5 - 30 кВт</li>
+                                <li>Вес: 1000 - 5300 кг</li>
+                            </ul>
+                            <div class="catalog-products__bottom-panel">
+                                <a href="#" class="btn">подробнее</a>
+                                <a href="#" class="btn btn_transparent-bg btn_mov-icon">видео</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-products__item">
+                        <div class="catalog-products__flag">
+                            <img src="img/src/russia.svg" alt="flag">
+                        </div>
+                        <div class="catalog-products__photo">
+                            <a href="#">
+                                <picture>
+                                    <source srcset="img/src/product-img.webp" type="image/webp">
+                                    <img src="img/src/product-img.jpg" alt="photo">
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="catalog-products__description">
+                            <span class="catalog-products__title">
+                                <a href="#">ГР-500(630) (Россия) горбыльно-ребровой станок</a>
+                            </span>
+                            <ul class="catalog-products__list">
+                                <li>Ø обработки: 300 - 800 мм</li>
+                                <li>РМЦ: 500 - 4000 мм</li>
+                                <li>Мощность: 5,5 - 30 кВт</li>
+                                <li>Вес: 1000 - 5300 кг</li>
+                            </ul>
+                            <div class="catalog-products__bottom-panel">
+                                <a href="#" class="btn">подробнее</a>
+                                <a href="#" class="btn btn_transparent-bg btn_mov-icon">видео</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-products__item">
+                        <div class="catalog-products__flag">
+                            <img src="img/src/russia.svg" alt="flag">
+                        </div>
+                        <div class="catalog-products__photo">
+                            <a href="#">
+                                <picture>
+                                    <source srcset="img/src/product-img.webp" type="image/webp">
+                                    <img src="img/src/product-img.jpg" alt="photo">
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="catalog-products__description">
+                            <span class="catalog-products__title">
+                                <a href="#">ГР-500(630) (Россия) горбыльно-ребровой станок</a>
+                            </span>
+                            <ul class="catalog-products__list">
+                                <li>Ø обработки: 300 - 800 мм</li>
+                                <li>РМЦ: 500 - 4000 мм</li>
+                                <li>Мощность: 5,5 - 30 кВт</li>
+                                <li>Вес: 1000 - 5300 кг</li>
+                            </ul>
+                            <div class="catalog-products__bottom-panel">
+                                <a href="#" class="btn">подробнее</a>
+                                <a href="#" class="btn btn_transparent-bg btn_mov-icon">видео</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-products__item">
+                        <div class="catalog-products__flag">
+                            <img src="img/src/russia.svg" alt="flag">
+                        </div>
+                        <div class="catalog-products__photo">
+                            <a href="#">
+                                <picture>
+                                    <source srcset="img/src/product-img.webp" type="image/webp">
+                                    <img src="img/src/product-img.jpg" alt="photo">
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="catalog-products__description">
+                            <span class="catalog-products__title">
+                                <a href="#">ГР-500(630) (Россия) горбыльно-ребровой станок</a>
+                            </span>
+                            <ul class="catalog-products__list">
+                                <li>Ø обработки: 300 - 800 мм</li>
+                                <li>РМЦ: 500 - 4000 мм</li>
+                                <li>Мощность: 5,5 - 30 кВт</li>
+                                <li>Вес: 1000 - 5300 кг</li>
+                            </ul>
+                            <div class="catalog-products__bottom-panel">
+                                <a href="#" class="btn">подробнее</a>
+                                <a href="#" class="btn btn_transparent-bg btn_mov-icon">видео</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-products__item">
+                        <div class="catalog-products__flag">
+                            <img src="img/src/russia.svg" alt="flag">
+                        </div>
+                        <div class="catalog-products__photo">
+                            <a href="#">
+                                <picture>
+                                    <source srcset="img/src/product-img.webp" type="image/webp">
+                                    <img src="img/src/product-img.jpg" alt="photo">
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="catalog-products__description">
+                            <span class="catalog-products__title">
+                                <a href="#">ГР-500(630) (Россия) горбыльно-ребровой станок</a>
+                            </span>
+                            <ul class="catalog-products__list">
+                                <li>Ø обработки: 300 - 800 мм</li>
+                                <li>РМЦ: 500 - 4000 мм</li>
+                                <li>Мощность: 5,5 - 30 кВт</li>
+                                <li>Вес: 1000 - 5300 кг</li>
+                            </ul>
+                            <div class="catalog-products__bottom-panel">
+                                <a href="#" class="btn">подробнее</a>
+                                <a href="#" class="btn btn_transparent-bg btn_mov-icon">видео</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="btn-panel">
-                    <a href="#" class="btn btn_transparent-bg btn_big-size">показать еще</a>
+                    <span id="load-more" class="btn btn_transparent-bg btn_big-size">показать еще</span>
                 </div>
                 <ul class="page-navi">
-                    <li class="active">
+                    <li class="page-navi__numb active">
                         <span>1</span>
                     </li>
-                    <li>
-                        <a href="#">2</a>
+                    <li class="page-navi__numb">
+                        <span>2</span>
                     </li>
-                    <li>
-                        <a href="#">3</a>
+                    <li class="page-navi__numb">
+                        <span>3</span>
                     </li>
-                    <li>
+                    <li class="page-navi__dots">
                         <span>...</span>
                     </li>
-                    <li>
-                        <a href="#">16</a>
+                    <li class="page-navi__numb">
+                        <span>16</span>
                     </li>
                 </ul>
                 <div class="title-panel">
@@ -463,7 +1087,7 @@
                             <div class="swiper-slide">
                                 <div class="mov">   
                                     <div class="mov__poster">
-                                        <iframe width="100%" height="377" src="https://www.youtube.com/embed/515D6cXkkLY?list=LL" title="MIAMI VIBES MELODIC SUMMER HOUSE MIX 2023 / DJ LIVE SUNSET MIX SET 2023" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                        <iframe src="https://www.youtube.com/embed/515D6cXkkLY?list=LL" title="MIAMI VIBES MELODIC SUMMER HOUSE MIX 2023 / DJ LIVE SUNSET MIX SET 2023" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                     </div>
                                     <span class="mov__title">Тут будет длинное название анонс для видео ролика</span>
                                 </div>
@@ -471,7 +1095,7 @@
                             <div class="swiper-slide">
                                 <div class="mov">   
                                     <div class="mov__poster">
-                                        <iframe width="100%" height="377" src="https://www.youtube.com/embed/515D6cXkkLY?list=LL" title="MIAMI VIBES MELODIC SUMMER HOUSE MIX 2023 / DJ LIVE SUNSET MIX SET 2023" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                        <iframe src="https://www.youtube.com/embed/515D6cXkkLY?list=LL" title="MIAMI VIBES MELODIC SUMMER HOUSE MIX 2023 / DJ LIVE SUNSET MIX SET 2023" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                     </div>
                                     <span class="mov__title">Тут будет длинное название анонс для видео ролика</span>
                                 </div>
@@ -479,7 +1103,7 @@
                             <div class="swiper-slide">
                                 <div class="mov">   
                                     <div class="mov__poster">
-                                        <iframe width="100%" height="377" src="https://www.youtube.com/embed/515D6cXkkLY?list=LL" title="MIAMI VIBES MELODIC SUMMER HOUSE MIX 2023 / DJ LIVE SUNSET MIX SET 2023" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                        <iframe src="https://www.youtube.com/embed/515D6cXkkLY?list=LL" title="MIAMI VIBES MELODIC SUMMER HOUSE MIX 2023 / DJ LIVE SUNSET MIX SET 2023" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                     </div>
                                     <span class="mov__title">Тут будет длинное название анонс для видео ролика</span>
                                 </div>
@@ -487,7 +1111,7 @@
                             <div class="swiper-slide">
                                 <div class="mov">   
                                     <div class="mov__poster">
-                                        <iframe width="100%" height="377" src="https://www.youtube.com/embed/515D6cXkkLY?list=LL" title="MIAMI VIBES MELODIC SUMMER HOUSE MIX 2023 / DJ LIVE SUNSET MIX SET 2023" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                        <iframe src="https://www.youtube.com/embed/515D6cXkkLY?list=LL" title="MIAMI VIBES MELODIC SUMMER HOUSE MIX 2023 / DJ LIVE SUNSET MIX SET 2023" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                     </div>
                                     <span class="mov__title">Тут будет длинное название анонс для видео ролика</span>
                                 </div>
@@ -495,7 +1119,7 @@
                             <div class="swiper-slide">
                                 <div class="mov">   
                                     <div class="mov__poster">
-                                        <iframe width="100%" height="377" src="https://www.youtube.com/embed/515D6cXkkLY?list=LL" title="MIAMI VIBES MELODIC SUMMER HOUSE MIX 2023 / DJ LIVE SUNSET MIX SET 2023" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                        <iframe src="https://www.youtube.com/embed/515D6cXkkLY?list=LL" title="MIAMI VIBES MELODIC SUMMER HOUSE MIX 2023 / DJ LIVE SUNSET MIX SET 2023" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                     </div>
                                     <span class="mov__title">Тут будет длинное название анонс для видео ролика</span>
                                 </div>
@@ -503,7 +1127,7 @@
                             <div class="swiper-slide">
                                 <div class="mov">   
                                     <div class="mov__poster">
-                                        <iframe width="100%" height="377" src="https://www.youtube.com/embed/515D6cXkkLY?list=LL" title="MIAMI VIBES MELODIC SUMMER HOUSE MIX 2023 / DJ LIVE SUNSET MIX SET 2023" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                        <iframe src="https://www.youtube.com/embed/515D6cXkkLY?list=LL" title="MIAMI VIBES MELODIC SUMMER HOUSE MIX 2023 / DJ LIVE SUNSET MIX SET 2023" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                     </div>
                                     <span class="mov__title">Тут будет длинное название анонс для видео ролика</span>
                                 </div>
