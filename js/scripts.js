@@ -20,6 +20,33 @@ $('.filters__close-btn').click(function() {
 	$('.filters__dropdown').removeClass('active');
 });
 
+/*- filters -*/
+$(() => {
+  $('[data-role="dropdown"]').on('change', (e) => {
+    const wrapper = $(e.currentTarget);
+    const button = wrapper.find('[data-role="button"]');
+    const controls = wrapper.find('[data-default-value]');
+
+    const isChanged = [...controls].some((control) => {
+      switch(control.type) {
+        case 'number': {
+          return control.value !== control.defaultValue
+        }
+      case 'radio': {}
+        case 'checkbox': {
+          return control.checked !== (control.defaultValue === '0')
+        }
+      }
+    });
+
+    if(isChanged) {
+      button.addClass('selected')
+    } else {
+      button.removeClass('selected')
+    }
+  })
+});
+
 /*- price -*/
 let priceGap = 0;
 
@@ -80,9 +107,9 @@ $('#load-more').click(function() {
 
 /*- page-navi -*/
 $('.page-navi__numb').click(function() {
-    $(this).siblings().removeClass('active');
-    $(this).toggleClass('active');
-    event.preventDefault();
+  $(this).siblings().removeClass('active');
+  $(this).toggleClass('active');
+  event.preventDefault();
 	var $hidden = $('.catalog-products__item:hidden');
 	$($hidden).slice(0, 4).fadeIn(800);
 	if ($hidden.length == 4) {
@@ -92,50 +119,60 @@ $('.page-navi__numb').click(function() {
 
 /*- mov-slider -*/
 var swiper = new Swiper('.mov-slider .swiper', {
+  autoHeight: true,
 	slidesPerView: 2,
-    spaceBetween: 60,
+  spaceBetween: 60,
 	pagination: {
 		el: '.swiper-pagination',
 		clickable: true,
-  	},
-  	navigation: {
-    	nextEl: '.mov-slider .swiper-button-next',
-    	prevEl: '.mov-slider .swiper-button-prev',
-  	},
+  },
+	navigation: {
+  	nextEl: '.mov-slider .swiper-button-next',
+  	prevEl: '.mov-slider .swiper-button-prev',
+	},
+  breakpoints: {
+    0: {
+      spaceBetween: 0,
+    },
+    460: {
+      spaceBetween: 15,
+    },
+    1024: {
+      spaceBetween: 39,
+    },
+    1500: {
+      spaceBetween: 60,
+    },
+  },  
 });
 
 /*- reviews-slider -*/
 var swiper = new Swiper('.reviews-slider .swiper', {
+  autoHeight: true,
 	slidesPerView: 3,
-    spaceBetween: 20,
-  	navigation: {
-    	nextEl: '.reviews-slider .swiper-button-next',
-    	prevEl: '.reviews-slider .swiper-button-prev',
-  	},
-});
-
-$(() => {
-  $('[data-role="dropdown"]').on('change', (e) => {
-    const wrapper = $(e.currentTarget);
-    const button = wrapper.find('[data-role="button"]');
-    const controls = wrapper.find('[data-default-value]');
-
-    const isChanged = [...controls].some((control) => {
-      switch(control.type) {
-        case 'number': {
-          return control.value !== control.defaultValue
-        }
-    	case 'radio': {}
-        case 'checkbox': {
-          return control.checked !== (control.defaultValue === '0')
-        }
-      }
-    });
-
-    if(isChanged) {
-      button.addClass('selected')
-    } else {
-      button.removeClass('selected')
-    }
-  })
+  spaceBetween: 20,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+	navigation: {
+  	nextEl: '.reviews-slider .swiper-button-next',
+  	prevEl: '.reviews-slider .swiper-button-prev',
+	},
+  breakpoints: {
+    0: {
+      spaceBetween: 0,
+    },
+    460: {
+      slidesPerView: 2,
+      spaceBetween: 15,
+    },
+    960: {
+      slidesPerView: 2,
+      spaceBetween: 15,
+    },
+    1024: {
+      spaceBetween: 20,
+    },
+  }, 
 });
