@@ -161,6 +161,7 @@ var swiper = new Swiper('.reviews-slider .swiper', {
 	},
   breakpoints: {
     0: {
+      slidesPerView: 3,
       spaceBetween: 0,
     },
     460: {
@@ -172,6 +173,7 @@ var swiper = new Swiper('.reviews-slider .swiper', {
       spaceBetween: 15,
     },
     1024: {
+      slidesPerView: 3,
       spaceBetween: 20,
     },
   }, 
