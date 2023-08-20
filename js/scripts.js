@@ -93,16 +93,18 @@ document.querySelectorAll('.price-slider').forEach((container) => {
   });
 });
 
+//if (document.documentElement.clientWidth > 320) {
+
 /*- catalog-products_ -*/
 $('.catalog-products__item:lt(8)').show();
 
 $('#load-more').click(function() {
-	event.preventDefault();
-	var $hidden = $('.catalog-products__item:hidden');
-	$($hidden).slice(0, 4).fadeIn(800);
-	if ($hidden.length == 4) {
-		$('#load-more').addClass('btn_hidden');
-	}
+  event.preventDefault();
+  var $hidden = $('.catalog-products__item:hidden');
+  $($hidden).slice(0, 4).fadeIn(800);
+  if ($hidden.length == 4) {
+    $('#load-more').addClass('btn_hidden');
+  }
 });
 
 /*- page-navi -*/
@@ -110,11 +112,11 @@ $('.page-navi__numb').click(function() {
   $(this).siblings().removeClass('active');
   $(this).toggleClass('active');
   event.preventDefault();
-	var $hidden = $('.catalog-products__item:hidden');
-	$($hidden).slice(0, 4).fadeIn(800);
-	if ($hidden.length == 4) {
-		$('#load-more').addClass('btn_hidden');
-	}
+  var $hidden = $('.catalog-products__item:hidden');
+  $($hidden).slice(0, 4).fadeIn(800);
+  if ($hidden.length == 4) {
+    $('#load-more').addClass('btn_hidden');
+  }
 });
 
 /*- mov-slider -*/
@@ -132,18 +134,47 @@ var swiper = new Swiper('.mov-slider .swiper', {
 	},
   breakpoints: {
     0: {
+      slidesPerView: 1,
       spaceBetween: 0,
     },
-    460: {
+    520: {
+      slidesPerView: 2,
       spaceBetween: 15,
     },
     1024: {
+      slidesPerView: 2,
       spaceBetween: 39,
     },
     1500: {
+      slidesPerView: 2,
       spaceBetween: 60,
     },
   },  
+});
+
+/*- articles-slider -*/
+var swiper = new Swiper('.articles-slider .swiper', {
+  autoHeight: true,
+  slidesPerView: 3,
+  spaceBetween: 20,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 0,
+    },
+    520: {
+      slidesPerView: 2,
+      spaceBetween: 15,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+  }, 
 });
 
 /*- reviews-slider -*/
@@ -161,14 +192,10 @@ var swiper = new Swiper('.reviews-slider .swiper', {
 	},
   breakpoints: {
     0: {
-      slidesPerView: 3,
+      slidesPerView: 1,
       spaceBetween: 0,
     },
-    460: {
-      slidesPerView: 2,
-      spaceBetween: 15,
-    },
-    960: {
+    520: {
       slidesPerView: 2,
       spaceBetween: 15,
     },
@@ -177,4 +204,94 @@ var swiper = new Swiper('.reviews-slider .swiper', {
       spaceBetween: 20,
     },
   }, 
+});
+
+/*- compilations-slider -*/
+var swiper = new Swiper('.compilations-slider .swiper', {
+  autoHeight: true,
+  slidesPerView: 2,
+  spaceBetween: 19,
+  loop: true,
+  navigation: {
+    nextEl: '#compilations-arrows .swiper-button-next',
+    prevEl: '#compilations-arrows .swiper-button-prev',
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 0,
+    },
+    620: {
+      slidesPerView: 2,
+      spaceBetween: 19,
+    },
+  }, 
+});
+
+/*- brands-slider -*/
+var swiper = new Swiper('.brands-slider .swiper', {
+  autoHeight: true,
+  slidesPerView: 4,
+  spaceBetween: 19,
+  loop: true,
+  navigation: {
+    nextEl: '#brands-arrow .swiper-button-next',
+    prevEl: '#brands-arrow .swiper-button-prev',
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    369: {
+      slidesPerView: 2,
+      spaceBetween: 19,
+    },
+    520: {
+      slidesPerView: 3,
+      spaceBetween: 19,
+    },
+    680: {
+      slidesPerView: 4,
+      spaceBetween: 19,
+    },
+  }, 
+});
+
+/*- countries-slider -*/
+var swiper = new Swiper('.countries-slider .swiper', {
+  autoHeight: true,
+  slidesPerView: 4,
+  spaceBetween: 19,
+  loop: true,
+  navigation: {
+    nextEl: '#countries-arrows .swiper-button-next',
+    prevEl: '#countries-arrows .swiper-button-prev',
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    369: {
+      slidesPerView: 2,
+      spaceBetween: 19,
+    },
+    520: {
+      slidesPerView: 3,
+      spaceBetween: 19,
+    },
+    680: {
+      slidesPerView: 4,
+      spaceBetween: 19,
+    },
+  }, 
+});
+
+/*- search-form -*/
+var sortingToggle = $('.sorting dt'),
+  sortingMenu= $('.sorting dd');
+
+sortingToggle.click(function(){
+  sortingMenu.toggleClass("show");
 });
