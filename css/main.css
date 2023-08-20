@@ -337,7 +337,6 @@ body.o-hidden {
 
 .filters__dropdown {
   position: absolute;
-  display: block;
   padding: 20px 10px;
   width: 100%;
   top: 56px;
@@ -2153,23 +2152,19 @@ input[type="range"]::-moz-range-thumb {
   flex-wrap: inherit;
   gap: 0 11px;
   order: 1;
-  margin: 15px -15px 0;
+  margin: 15px -15px -950px;
   padding: 8px 15px;
+  height: 1000px;
   overflow-x: scroll;
   white-space: nowrap;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  overflow-y: visible;
   }
 
 .filters::-webkit-scrollbar { 
   width: 0; 
   height: 0;
   background: transparent;
-  }
-
-.filters__item {
-  
   }
 
 .filters__item_hidden {
