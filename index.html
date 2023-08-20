@@ -88,13 +88,9 @@
                     <div class="settings__bottom-panel">
                         <dl class="sorting">
                             <dt>Сортировать по:</dt>
-                            <dd class="active">
-                                <a href="#">Популярности (возрастанию)</a>
-                            </dd>
                             <dd>
+                                <a href="#" class="active">Популярности (возрастанию)</a>
                                 <a href="#">Алфавиту (убыванию)</a>
-                            </dd>
-                            <dd>
                                 <a href="#">Цене (убыванию)</a>
                             </dd>
                         </dl>
@@ -806,6 +802,10 @@
                 </ul>
                 <div class="title-panel">
                     <h2 class="title">Популярные подборки</h2>
+                    <div id="compilations-arrows" class="mob-slider-arrows">
+                        <div class="mob-right-arrow swiper-button-next"></div>
+                        <div class="mob-left-arrow swiper-button-prev"></div>
+                    </div>
                 </div>
                 <div class="compilations">
                     <a href="#" class="compilation">Оборудование для обработки дерева резанием</a>
@@ -815,8 +815,36 @@
                     <a href="#" class="compilation">Оборудование для обработки дерева резанием</a>
                     <a href="#" class="compilation">Оборудование для обработки дерева</a>
                 </div>
+                <div class="compilations-slider">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#" class="compilation">Оборудование для обработки дерева резанием</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="compilation">Оборудование для обработки дерева</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="compilation">Оборудование для обработки дерева резанием</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="compilation">Оборудование для обработки дерева</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="compilation">Оборудование для обработки дерева резанием</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="compilation">Оборудование для обработки дерева</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="title-panel">
                     <h2 class="title">Бренд производителя</h2>
+                    <div id="brands-arrow" class="mob-slider-arrows">
+                        <div class="mob-right-arrow swiper-button-next"></div>
+                        <div class="mob-left-arrow swiper-button-prev"></div>
+                    </div>
                 </div>
                 <div class="brands">
                     <a href="#" class="brand">
@@ -844,8 +872,48 @@
                         <img src="img/src/brand-2.svg" alt="brand">
                     </a>
                 </div>
+                <div class="brands-slider">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#" class="brand">
+                                    <img src="img/src/brand-1.svg" alt="brand">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="brand">
+                                    <img src="img/src/brand-2.svg" alt="brand">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="brand">
+                                    <img src="img/src/brand-1.svg" alt="brand">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="brand">
+                                    <img src="img/src/brand-2.svg" alt="brand">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="brand">
+                                    <img src="img/src/brand-1.svg" alt="brand">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="brand">
+                                    <img src="img/src/brand-2.svg" alt="brand">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="title-panel">
                     <h2 class="title">Страны изготовители</h2>
+                    <div id="countries-arrows" class="mob-slider-arrows">
+                        <div class="mob-right-arrow swiper-button-next"></div>
+                        <div class="mob-left-arrow swiper-button-prev"></div>
+                    </div>
                 </div>
                 <div class="countries">
                     <div class="country">
@@ -945,6 +1013,102 @@
                         </a>
                     </div>
                 </div>
+                <div class="countries-slider">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="country">
+                                    <a href="#">
+                                        <span class="country__flag">
+                                            <img src="img/src/flag-1.svg" alt="flag">
+                                        </span>
+                                        <span class="country__text">Китай</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="country">
+                                    <a href="#">
+                                        <span class="country__flag">
+                                            <img src="img/src/flag-2.svg" alt="flag">
+                                        </span>
+                                        <span class="country__text">Нидерланды</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="country">
+                                    <a href="#">
+                                        <span class="country__flag">
+                                            <img src="img/src/flag-3.svg" alt="flag">
+                                        </span>
+                                        <span class="country__text">Германия</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="country">
+                                    <a href="#">
+                                        <span class="country__flag">
+                                            <img src="img/src/flag-1.svg" alt="flag">
+                                        </span>
+                                        <span class="country__text">Китай</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="country">
+                                    <a href="#">
+                                        <span class="country__flag">
+                                            <img src="img/src/flag-2.svg" alt="flag">
+                                        </span>
+                                        <span class="country__text">Нидерланды</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="country">
+                                    <a href="#">
+                                        <span class="country__flag">
+                                            <img src="img/src/flag-3.svg" alt="flag">
+                                        </span>
+                                        <span class="country__text">Германия</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="country">
+                                    <a href="#">
+                                        <span class="country__flag">
+                                            <img src="img/src/flag-1.svg" alt="flag">
+                                        </span>
+                                        <span class="country__text">Китай</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="country">
+                                    <a href="#">
+                                        <span class="country__flag">
+                                            <img src="img/src/flag-2.svg" alt="flag">
+                                        </span>
+                                        <span class="country__text">Нидерланды</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="country">
+                                    <a href="#">
+                                        <span class="country__flag">
+                                            <img src="img/src/flag-3.svg" alt="flag">
+                                        </span>
+                                        <span class="country__text">Германия</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="section section_gray-bg">
@@ -1009,6 +1173,9 @@
                     </div>
                     <div class="gl-right-arrow swiper-button-next"></div>
                     <div class="gl-left-arrow swiper-button-prev"></div>
+                </div>
+                <div class="mob-btn-panel mob-btn-panel_indent-bt-none">
+                    <a href="#" class="btn btn_play-icon">Перейти на канал</a>
                 </div>
             </div>
         </section>
@@ -1076,6 +1243,81 @@
                             <a href="#" class="more-btn">Подробнее</a>
                         </div>
                     </div>
+                </div>
+                <div class="articles-slider">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="article">
+                                    <div class="article__photo">
+                                        <a href="#">
+                                            <picture>
+                                                <source srcset="img/src/article-img.webp" type="image/webp">
+                                                <img src="img/src/article-img.jpg" alt="photo">
+                                            </picture>
+                                        </a>
+                                    </div>
+                                    <span class="article__title">
+                                        <a href="#">
+                                            Лучшее предложение рынка?! Оптоволоконная установка лазерного раскроя KMT L1
+                                        </a>
+                                    </span>
+                                    <div class="article__bottom-panel">
+                                        <span class="article__date">22.05.2023</span>
+                                        <a href="#" class="more-btn">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="article">
+                                    <div class="article__photo">
+                                        <a href="#">
+                                            <picture>
+                                                <source srcset="img/src/article-img.webp" type="image/webp">
+                                                <img src="img/src/article-img.jpg" alt="photo">
+                                            </picture>
+                                        </a>
+                                    </div>
+                                    <span class="article__title">
+                                        <a href="#">
+                                            Лучшее предложение рынка?! Оптоволоконная установка лазерного раскроя KMT L1
+                                        </a>
+                                    </span>
+                                    <div class="article__bottom-panel">
+                                        <span class="article__date">22.05.2023</span>
+                                        <a href="#" class="more-btn">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="article">
+                                    <div class="article__photo">
+                                        <a href="#">
+                                            <picture>
+                                                <source srcset="img/src/article-img.webp" type="image/webp">
+                                                <img src="img/src/article-img.jpg" alt="photo">
+                                            </picture>
+                                        </a>
+                                    </div>
+                                    <span class="article__title">
+                                        <a href="#">
+                                            Лучшее предложение рынка?! Оптоволоконная установка лазерного раскроя KMT L1
+                                        </a>
+                                    </span>
+                                    <div class="article__bottom-panel">
+                                        <span class="article__date">22.05.2023</span>
+                                        <a href="#" class="more-btn">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gl-pagination swiper-pagination"></div>
+                    </div>
+                    <div class="gl-right-arrow swiper-button-next"></div>
+                    <div class="gl-left-arrow swiper-button-prev"></div>
+                </div>
+                <div class="mob-btn-panel">
+                    <a href="#" class="btn btn_follow-icon">перейти на яндекс.дзен</a>
                 </div>
                 <div class="title-panel">
                     <h2 class="title">Отзывы</h2>
@@ -1361,9 +1603,13 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="gl-pagination swiper-pagination"></div>
                     </div>
                     <div class="gl-right-arrow swiper-button-next"></div>
                     <div class="gl-left-arrow swiper-button-prev"></div>
+                </div>
+                <div class="mob-btn-panel">
+                    <a href="#" class="btn btn_follow-icon">все отзывы</a>
                 </div>
                 <div class="info-text">
                     <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики. Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с запятой, но текст не дал сбить себя с толку. Он собрал семь своих заглавных букв, подпоясал инициал за пояс и пустился в дорогу.<br> 
