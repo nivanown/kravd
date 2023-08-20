@@ -110,7 +110,7 @@ $('#load-more').click(function() {
 /*- page-navi -*/
 $('.page-navi__numb').click(function() {
   $(this).siblings().removeClass('active');
-  $(this).toggleClass('active');
+  $(this).addClass('active');
   event.preventDefault();
   var $hidden = $('.catalog-products__item:hidden');
   $($hidden).slice(0, 4).fadeIn(800);
