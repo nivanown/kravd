@@ -2152,9 +2152,9 @@ input[type="range"]::-moz-range-thumb {
   flex-wrap: inherit;
   gap: 0 11px;
   order: 1;
-  margin: 15px -15px -950px;
+  margin: 15px -15px -1950px;
   padding: 8px 15px;
-  height: 1000px;
+  height: 2000px;
   overflow-x: scroll;
   white-space: nowrap;
   -ms-overflow-style: none;
