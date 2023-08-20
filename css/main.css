@@ -1958,6 +1958,35 @@ input[type="range"]::-moz-range-thumb {
 /* responsive 650px */
 @media (max-width: 650px) {
 
+.section {
+  overflow: hidden;
+  }
+
+.banner {
+  padding: 20px 14px 165px;
+  }
+
+.banner__img {
+  width: 350px;
+  right: -60px;
+  bottom: 0;
+  }
+
+.banner__title {
+  line-height: 35px;
+  }
+
+.banner__title small {
+  display: block;
+  margin: 0;
+  font-size: 16px;
+  line-height: 11px;
+  }
+
+.filters {
+  display: none;
+  }
+
 .review__link a br {
   display: none;
   }
@@ -2145,6 +2174,11 @@ input[type="range"]::-moz-range-thumb {
   height: 280px;
   }
 
+.banner__title {
+  font-size: 18px;
+  line-height: 26px;
+  }
+
 }
 
 /* responsive 369px */
@@ -2174,6 +2208,19 @@ input[type="range"]::-moz-range-thumb {
 .country__text {
   font-size: 12px;
   line-height: 20px;
+  }
+
+.banner {
+  padding: 20px 14px 140px;
+  }
+
+.banner__title {
+  font-size: 16px;
+  line-height: 22px;
+  }
+
+.banner__img {
+  width: 300px;
   }
 
 }
