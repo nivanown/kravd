@@ -213,7 +213,6 @@
                         </div>
                         <span class="filters__all-btn">Все фильтры</span>
                     </div>
-                    <div class="settings">
                     <div class="settings__bottom-panel">
                         <dl class="sorting">
                             <dt>Сортировать по:</dt>
@@ -223,9 +222,9 @@
                                 <a href="#">Цене (убыванию)</a>
                             </dd>
                         </dl>
-                        <span class="reset-btn">сбросить фильтры</span>
+                        <span class="reset-btn reset-btn_mob-hidden">сбросить фильтры</span>
+                        <span class="mob-btn-filters">Все фильтры</span>
                     </div>
-                </div>
                 </div>
                 <div class="catalog-products">
                     <div class="catalog-products__item">
@@ -1745,6 +1744,155 @@
                 </div>
             </div>
         </section>
+
+        <div class="filters-modal">
+            <div class="filters-modal__top-panel">
+                <span class="filters-modal__title">фильтры</span>
+                <span class="filters-modal__close">Закрыть</span>
+            </div>   
+            <div class="filters-modal__content">
+                <div class="filters-accordion">
+                    <div class="filters-accordion__item">
+                        <span class="filters-accordion__title">Цена, ₽</span>
+                        <div class="filters-accordion__content">
+                            <div class="price-slider">
+                                <div class="price-input">
+                                    <div class="field">
+                                        <span>От</span>
+                                        <input
+                                            type="number"
+                                            class="input-min"
+                                            data-default-value="0"
+                                            value="0"
+                                        />
+                                    </div>
+                                    <div class="field">
+                                        <span>До</span>
+                                        <input
+                                            type="number"
+                                            class="input-max"
+                                            data-default-value="100000"
+                                            value="100000"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="slider">
+                                    <div class="progress"></div>
+                                </div>
+                                <div class="range-input">
+                                    <input type="range" class="range-min" min="0" max="100000" value="0" step="100">
+                                    <input type="range" class="range-max" min="0" max="100000" value="100000" step="100">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filters-accordion__item">
+                        <span class="filters-accordion__title">Наши предложения</span>
+                        <div class="filters-accordion__content">
+                            <ul class="filters-accordion__list">
+                                <li>
+                                    <div class="checkbox">
+                                        <input id="type1" type="checkbox">
+                                        <label for="type1">Предложение 1</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox">
+                                        <input id="type2" type="checkbox">
+                                        <label for="type2">Предложение 2</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox">
+                                        <input id="type3" type="checkbox">
+                                        <label for="type3">Предложение 3</label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="filters-accordion__item">
+                        <span class="filters-accordion__title">Бренд</span>
+                        <div class="filters-accordion__content">
+                            <ul class="filters-accordion__list">
+                                <li>
+                                    <div class="checkbox">
+                                        <input id="type1" type="checkbox">
+                                        <label for="type1">Бренд 1</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox">
+                                        <input id="type2" type="checkbox">
+                                        <label for="type2">Бренд 2</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox">
+                                        <input id="type3" type="checkbox">
+                                        <label for="type3">Бренд 3</label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="filters-accordion__item">
+                        <span class="filters-accordion__title">Цвет</span>
+                        <div class="filters-accordion__content">
+                            <ul class="filters-accordion__list">
+                                <li>
+                                    <div class="checkbox">
+                                        <input id="black-color2" type="checkbox">
+                                        <label for="black-color2">Черный</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox">
+                                        <input id="gray-color2" type="checkbox">
+                                        <label for="gray-color2">Серый</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox">
+                                        <input id="blue-color2" type="checkbox">
+                                        <label for="blue-color2">Синий</label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="filters-accordion__item">
+                        <span class="filters-accordion__title">Тип управления</span>
+                        <div class="filters-accordion__content">
+                            <ul class="filters-accordion__list">
+                                <li>
+                                    <div class="checkbox">
+                                        <input id="type1" type="checkbox">
+                                        <label for="type1">Тип управления 1</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox">
+                                        <input id="type2" type="checkbox">
+                                        <label for="type2">Тип управления 2</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox">
+                                        <input id="type3" type="checkbox">
+                                        <label for="type3">Тип управления 3</label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="filters-modal__bottom-panel">
+                <a href="#" class="btn">применить фильтры</a>
+                <a href="#" class="btn btn_transparent-bg">сбросить все фильтры</a>
+            </div>       
+        </div>
         <!-- Копировать новые блоки конец -->
 
     </div>
