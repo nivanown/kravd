@@ -288,10 +288,9 @@ var swiper = new Swiper('.countries-slider .swiper', {
   }, 
 });
 
-/*- search-form -*/
-var sortingToggle = $('.sorting dt'),
-  sortingMenu= $('.sorting dd');
-
-sortingToggle.click(function(){
-  sortingMenu.toggleClass("show");
+/*- sorting -*/
+$('.sorting dt').click(function(){ 
+  const currentElement = $(this).next('.sorting dd'); 
+  $('.sorting dd').not(currentElement).removeClass('show');  
+  currentElement.toggleClass('show'); 
 });
