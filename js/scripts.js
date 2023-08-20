@@ -294,3 +294,20 @@ $('.sorting dt').click(function(){
   $('.sorting dd').not(currentElement).removeClass('show');  
   currentElement.toggleClass('show'); 
 });
+
+/*- filters-modal -*/
+$('.mob-btn-filters').click(function() {
+  $('.filters-modal').addClass('show');
+  $('body').addClass('o-hidden');
+});
+
+$('.filters-modal__close').click(function() {
+  $('.filters-modal').removeClass('show');
+  $('body').removeClass('o-hidden');
+});
+
+/*- filters-accordion -*/
+$('.filters-accordion__title').click(function() {
+  $(this).next().slideToggle(200);
+  $(this).toggleClass('active', 200);
+});
