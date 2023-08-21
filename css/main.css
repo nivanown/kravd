@@ -189,6 +189,7 @@ body.o-hidden {
   padding: 3px 0 18px;
   border-radius: 5px;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  transition: .3s box-shadow;
   }
 
 .catalog-categories__item:hover {
@@ -746,7 +747,14 @@ input[type="range"]::-moz-range-thumb {
   position: relative;
   display: none;
   padding: 15px 0 0;
+  border: 1px solid #fff;
+  border-radius: 5px;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  transition: .3s border-color;
+  }
+
+.catalog-products__item:hover {
+  border-color: #005CFA;
   }
 
 /* catalog-products */
